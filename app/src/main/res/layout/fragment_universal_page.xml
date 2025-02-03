@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".presentation.basic.gallery.GalleryFragment">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navigationIcon="@drawable/ic_left">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/toolbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:maxLines="1"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            tools:text="Category" />
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/name_tv"
+        android:layout_width="0dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/gray_dark"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        tools:text="Name Surname" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/seasons_tv"
+        android:layout_width="56dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="26dp"
+        android:textSize="14sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/layout_scroll"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/layout_scroll"
+        android:text="@string/season" />
+
+    <HorizontalScrollView
+        android:id="@+id/layout_scroll"
+        android:layout_width="0dp"
+        android:layout_height="36dp"
+        android:scrollbars="none"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/seasons_tv"
+        app:layout_constraintTop_toBottomOf="@+id/name_tv">
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/category_cg"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            app:singleSelection="true"
+            android:visibility="gone"
+            app:chipSpacingHorizontal="8dp">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textSize="18sp"
+                tools:text="Category"/>
+        </com.google.android.material.chip.ChipGroup>
+
+    </HorizontalScrollView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/content_rv"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="26dp"
+        android:clipToPadding="false"
+        android:paddingBottom="90dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layout_scroll"
+        tools:listitem="@layout/item_movie_horizontal" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

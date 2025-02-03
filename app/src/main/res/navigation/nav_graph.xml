@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_basic"
+    app:startDestination="@id/loaderFragment">
+
+    <fragment
+        android:id="@+id/loaderFragment"
+        android:name="com.example.homework.presentation.loader.LoaderFragment"
+        android:label="fragment_loader"
+        tools:layout="@layout/fragment_loader">
+        <action
+            android:id="@+id/action_loaderFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_right"
+            app:popUpTo="@id/loaderFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.homework.presentation.basic.homepage.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home">
+        <argument
+            android:name="kinopoiskId"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_homeFragment_to_listOfMoviesFragment"
+            app:destination="@id/listOfMoviesFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_movieDetailsFragment"
+            app:destination="@id/movieDetailsFragment">
+
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/listOfMoviesFragment"
+        android:name="com.example.homework.presentation.basic.listOfMovies.ListOfMoviesFragment"
+        android:label="fragment_list_of_movies"
+        tools:layout="@layout/fragment_list_of_movies">
+        <argument
+            android:name="collectionName"
+            app:argType="string" />
+        <argument
+            android:name="type"
+            app:argType="string" />
+        <argument
+            android:name="countryId"
+            app:argType="integer" />
+        <argument
+            android:name="genreId"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_listOfMoviesFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_listOfMoviesFragment_to_searchFragment"
+            app:destination="@id/searchFragment" />
+        <action
+            android:id="@+id/action_listOfMoviesFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_listOfMoviesFragment_to_movieDetailsFragment"
+            app:destination="@id/movieDetailsFragment" />
+        <action
+            android:id="@+id/action_listOfMoviesFragment_to_movieDetailsFragment2"
+            app:destination="@id/movieDetailsFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.example.homework.presentation.search.search.SearchFragment"
+        android:label="fragment_search"
+        tools:layout="@layout/fragment_search">
+        <action
+            android:id="@+id/action_searchFragment_to_movieDetailsFragment"
+            app:destination="@id/movieDetailsFragment" />
+        <action
+            android:id="@+id/action_searchFragment_to_settingSearchFragment"
+            app:destination="@id/settingSearchFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.homework.presentation.profile.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile">
+        <action
+            android:id="@+id/action_profileFragment_to_movieDetailsFragment"
+            app:destination="@id/movieDetailsFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_listOfMoviesFragment"
+            app:destination="@id/listOfMoviesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/movieDetailsFragment"
+        android:name="com.example.homework.presentation.basic.movieDetails.MovieDetailsFragment"
+        android:label="MovieDetailsFragment"
+        tools:layout="@layout/fragment_movie_details">
+        <action
+            android:id="@+id/action_movieDetailsFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <argument
+            android:name="kinopoiskId"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_movieDetailsFragment_to_personFragment"
+            app:destination="@id/personFragment">
+            <argument
+                android:name="personId"
+                app:argType="integer" />
+        </action>
+        <action
+            android:id="@+id/action_movieDetailsFragment_to_similarListFragment"
+            app:destination="@id/similarListFragment"></action>
+        <action
+            android:id="@+id/action_movieDetailsFragment_to_teamListFragment"
+            app:destination="@id/teamListFragment" />
+        <action
+            android:id="@+id/action_movieDetailsFragment_to_galleryFragment"
+            app:destination="@id/galleryFragment" />
+        <action
+            android:id="@+id/action_movieDetailsFragment_to_seriesFragment"
+            app:destination="@id/seriesFragment" />
+        <action
+            android:id="@+id/action_movieDetailsFragment_self"
+            app:destination="@id/movieDetailsFragment" />
+        <action
+            android:id="@+id/action_movieDetailsFragment_to_seriesFragment2"
+            app:destination="@id/seriesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/personFragment"
+        android:name="com.example.homework.presentation.basic.person.PersonFragment"
+        android:label="fragment_person"
+        tools:layout="@layout/fragment_person">
+        <argument
+            android:name="personId"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_personFragment_to_movieDetailsFragment"
+            app:destination="@id/movieDetailsFragment" />
+        <action
+            android:id="@+id/action_personFragment_to_filmographyFragment"
+            app:destination="@id/filmographyFragment" />
+        <action
+            android:id="@+id/action_personFragment_to_fullScreenImageFragment"
+            app:destination="@id/fullScreenImageFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/similarListFragment"
+        android:name="com.example.homework.presentation.basic.similar.SimilarListFragment"
+        android:label="fragment_similar_list"
+        tools:layout="@layout/fragment_list_of_movies">
+        <argument
+            android:name="kinopoiskId"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_similarListFragment_to_movieDetailsFragment"
+            app:destination="@id/movieDetailsFragment" />
+        <action
+            android:id="@+id/action_similarListFragment_to_movieDetailsFragment2"
+            app:destination="@id/movieDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/teamListFragment"
+        android:name="com.example.homework.presentation.basic.team.TeamListFragment"
+        android:label="fragment_team_list"
+        tools:layout="@layout/fragment_list_of_movies">
+        <argument
+            android:name="kinopoiskId"
+            app:argType="integer" />
+        <argument
+            android:name="isActors"
+            app:argType="boolean" />
+        <action
+            android:id="@+id/action_teamListFragment_to_movieDetailsFragment"
+            app:destination="@id/movieDetailsFragment" />
+        <action
+            android:id="@+id/action_teamListFragment_to_personFragment"
+            app:destination="@id/personFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/galleryFragment"
+        android:name="com.example.homework.presentation.basic.gallery.GalleryFragment"
+        android:label="fragment_universal_page"
+        tools:layout="@layout/fragment_universal_page">
+        <action
+            android:id="@+id/action_galleryFragment_to_movieDetailsFragment"
+            app:destination="@id/movieDetailsFragment" />
+        <argument
+            android:name="kinopoiskId"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_galleryFragment_to_fullScreenImageFragment"
+            app:destination="@id/fullScreenImageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/filmographyFragment"
+        android:name="com.example.homework.presentation.basic.filmography.FilmographyFragment"
+        tools:layout="@layout/fragment_universal_page">
+        <argument
+            android:name="personId"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_filmographyFragment_to_personFragment"
+            app:destination="@id/personFragment" />
+        <action
+            android:id="@+id/action_filmographyFragment_to_movieDetailsFragment"
+            app:destination="@id/movieDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/seriesFragment"
+        android:name="com.example.homework.presentation.basic.series.SeriesFragment"
+        tools:layout="@layout/fragment_universal_page">
+        <argument
+            android:name="kinopoiskId"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_seriesFragment_to_movieDetailsFragment"
+            app:destination="@id/movieDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/fullScreenImageFragment"
+        android:name="com.example.homework.presentation.basic.image.FullScreenImageFragment"
+        android:label="fragment_full_screen_image"
+        tools:layout="@layout/fragment_full_screen_image">
+        <argument
+            android:name="imageUrl"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_fullScreenImageFragment_to_personFragment2"
+            app:destination="@id/personFragment" />
+        <action
+            android:id="@+id/action_fullScreenImageFragment_to_galleryFragment2"
+            app:destination="@id/galleryFragment" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/settingSearchFragment"
+        android:name="com.example.homework.presentation.search.setting.SettingSearchFragment"
+        tools:layout="@layout/fragment_setting_search">
+        <action
+            android:id="@+id/action_settingSearchFragment_to_countryGenreFragment"
+            app:destination="@id/countryGenreFragment" />
+        <argument
+            android:name="isCountryRequest"
+            android:defaultValue="true"
+            app:argType="boolean" />
+        <argument
+            android:name="yearFrom"
+            android:defaultValue="1950"
+            app:argType="integer" />
+        <argument
+            android:name="yearTo"
+            android:defaultValue="2024"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_settingSearchFragment_to_yearSelectorFragment"
+            app:destination="@id/yearSelectorFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/countryGenreFragment"
+        android:name="com.example.homework.presentation.search.countryGenre.CountryGenreFragment"
+        tools:layout="@layout/fragment_country_genre">
+        <argument
+            android:name="isCountryRequest"
+            android:defaultValue="true"
+            app:argType="boolean" />
+        <action
+            android:id="@+id/action_countryGenreFragment_to_settingSearchFragment"
+            app:destination="@id/settingSearchFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/yearSelectorFragment"
+        android:name="com.example.homework.presentation.search.year.YearSelectorFragment"
+        tools:layout="@layout/fragment_year_selector">
+        <action
+            android:id="@+id/action_yearSelectorFragment_to_settingSearchFragment"
+            app:destination="@id/settingSearchFragment" />
+    </fragment>
+
+
+</navigation>

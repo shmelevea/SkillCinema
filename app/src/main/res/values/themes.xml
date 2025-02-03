@@ -1,0 +1,20 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Homework" parent="Theme.Material3.Light.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="materialButtonStyle">@style/CustomButtonStyle</item>
+        <item name="chipStyle">@style/CustomChipStyle</item>
+        <item name="android:textViewStyle">@style/TextViewStyle</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">false</item>
+
+        <item name="imageButtonStyle">@style/BorderlessImageButtonStyle</item>
+        <item name="sliderStyle">@style/CustomRangeSliderStyle</item>
+
+        <item name="android:windowBackground">@color/white</item>
+    </style>
+
+    <style name="Theme.Homework" parent="Base.Theme.Homework" />
+
+</resources>

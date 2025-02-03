@@ -1,0 +1,149 @@
+<resources>
+    <string name="app_name">homework</string>
+    <string name="action_settings" translatable="false">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label" translatable="false">First Fragment</string>
+    <string name="second_fragment_label" translatable="false">Second Fragment</string>
+    <string name="next" translatable="false">Next</string>
+    <string name="find_out_about_premieres">Find out about premieres</string>
+    <string name="create_collections">Create collections</string>
+    <string name="share_with_friends">Share with friends</string>
+    <string name="previous" translatable="false">Previous</string>
+
+    <string name="lorem_ipsum" translatable="false">
+        Lorem ipsum dolor sit amet
+    </string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
+    <string name="large_text" translatable="false">"Material is the metaphor.\n\n"
+    </string>
+    <string name="skip">Skip</string>
+    <string name="home" translatable="false">home</string>
+    <string name="search" translatable="false">search</string>
+    <string name="profile" translatable="false">profile</string>
+    <string name="title_activity_second" translatable="false">SecondActivity</string>
+    <string name="title_home" translatable="false">Home</string>
+    <string name="title_dashboard" translatable="false">Dashboard</string>
+    <string name="title_notifications" translatable="false">Notifications</string>
+    <string name="all">All</string>
+    <string name="premiere">Premiere</string>
+    <string name="top_250">TOP-250</string>
+    <string name="show_all">Show all</string>
+    <string name="tv_series">TV series</string>
+    <string name="actors">Actors</string>
+    <string name="best">The Best</string>
+    <string name="cast">Cast</string>
+    <string name="gallery">Gallery</string>
+    <string name="period">Period</string>
+    <string name="search_settings">Search settings</string>
+    <string name="similar_movies">Similar movies</string>
+
+    <plurals name="movie_categories" translatable="false">
+        <item quantity="one">%1$s %2$s</item>
+        <item quantity="other">%1$s %2$s</item>
+    </plurals>
+
+    <plurals name="season_count">
+        <item quantity="one">%1$d season</item>
+        <item quantity="other">%1$d seasons</item>
+    </plurals>
+
+    <plurals name="episode_count">
+        <item quantity="one">%1$d episode</item>
+        <item quantity="other">%1$d episodes</item>
+    </plurals>
+
+    <string name="rating_with_name">%1$s %2$s</string>
+    <string name="year_with_genres">%1$d %2$s</string>
+    <string name="country_length_age">%1$s, %2$s, %3$s</string>
+
+    <string name="description_not_available">Description not available</string>
+    <string name="hours_label">h</string>
+    <string name="minutes_label">min</string>
+    <string name="age_label" translatable="false">+</string>
+    <string name="unknown_genre" translatable="false">Unknown Genre</string>
+    <string name="unknown_country" translatable="false">Unknown Country</string>
+    <string name="back_btn">back</string>
+    <string name="seasons_and_episodes">Seasons and episodes</string>
+    <string name="filmography">Filmography</string>
+    <string name="to_the_list">To the list</string>
+
+    <plurals name="film_count">
+        <item quantity="one">%d film</item>
+        <item quantity="other">%d films</item>
+    </plurals>
+
+    <string name="category_still">Still</string>
+    <string name="category_shooting">Shooting</string>
+    <string name="category_poster">Poster</string>
+    <string name="category_fan_art">Fan-art</string>
+    <string name="category_promo">Promo</string>
+    <string name="category_concept">Concept</string>
+    <string name="category_wallpaper">Wallpaper</string>
+    <string name="category_cover">Cover</string>
+    <string name="category_screenshot">Screenshot</string>
+
+    <string name="season_episode_count">Season %1$d, %2$s</string>
+    <string name="season">Season</string>
+    <plurals name="episodes_count">
+        <item quantity="one">%d episode</item>
+        <item quantity="other">%d episodes</item>
+    </plurals>
+
+    <string name="actor">Actor</string>
+    <string name="producer">Producer</string>
+    <string name="voice_director">Voice Director</string>
+    <string name="translator">Translator</string>
+    <string name="writer">Writer</string>
+    <string name="operator">Operator</string>
+    <string name="design">Designer</string>
+    <string name="editor">Editor</string>
+    <string name="director">Director</string>
+    <string name="himself">Himself</string>
+    <string name="hrono_titr_male">Chronicler (male)</string>
+    <string name="herself">Herself</string>
+    <string name="hrono_titr_female">Chronicler (female)</string>
+    <string name="composer">Composer</string>
+    <string name="full_screen_image">full screen image</string>
+    <string name="view_image">View image</string>
+    <string name="voice_female">Voice (Female)</string>
+    <string name="voice_male">Voice (Male)</string>
+    <string name="search_edit">Movies, actors, directors</string>
+    <string name="not_found">Unfortunately, nothing was\n found for your request.</string>
+    <string name="show">Show</string>
+    <string name="rating">Rating</string>
+    <string name="any">any</string>
+    <string name="sort">Sort</string>
+    <string name="movies">Movies</string>
+    <string name="series">Series</string>
+    <string name="date">Date</string>
+    <string name="popularity">Popularity</string>
+    <string name="country">Country</string>
+    <string name="genre">Genre</string>
+    <string name="year">Year</string>
+    <string name="search_in_the_period_from">Search in the period from</string>
+    <string name="search_in_the_period_up_to">Search in the period up to</string>
+    <string name="select">Select</string>
+    <string name="selected_year_range">from %1$d to %2$d</string>
+    <string name="collections">Collections</string>
+    <string name="create_collection">Create your own collection</string>
+    <string name="error">Error!</string>
+    <string name="error_msg">An error occurred while processing your request.</string>
+    <string name="add_collection">Add to collection</string>
+    <string name="make_a_name">Come up with a name for your new collection</string>
+    <string name="no_data">No data</string>
+    <string name="share">Share</string>
+    <string name="interested">Interested</string>
+    <string name="viewed">Viewed</string>
+    <string name="liked">Favorites</string>
+    <string name="wishlist">Wishlist</string>
+    <string name="remove">remove</string>
+    <string name="clear_history">clear history</string>
+    <string name="create_own_collection">Create own collection</string>
+    <string name="apply">Apply</string>
+    <string name="fictitious_name">Come up with a name for the collection</string>
+    <string name="category_saved">Category saved</string>
+    <string name="name_cannot_be_empty">Name cannot be empty</string>
+    <string name="refresh">Refresh</string>
+
+</resources>

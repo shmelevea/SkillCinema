@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.onboarding.OnboardingFragment">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/logo_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="48dp"
+        android:src="@drawable/logo_skillcinema"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/onboarding_vp2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/seekBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logo_iv" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="26dp"
+        android:text="@string/skip"
+        android:id="@+id/skip_btn"
+        android:textColor="@color/gray_gag"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/logo_iv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/logo_iv" />
+
+    <androidx.appcompat.widget.AppCompatSeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="56dp"
+        android:layout_height="12dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="32dp"
+        android:progressBackgroundTint="@android:color/transparent"
+        android:progressTint="@android:color/transparent"
+        android:thumb="@drawable/custom_thumb"
+        android:tickMark="@drawable/custom_tick_mark"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:max="2" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

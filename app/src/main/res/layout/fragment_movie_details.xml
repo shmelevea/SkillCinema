@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="false"
+    android:paddingBottom="90dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/back_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="44dp"
+            android:contentDescription="@string/back_btn"
+            android:elevation="4dp"
+            android:src="@drawable/ic_left"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/poster_iv"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:foreground="@drawable/gradient_overlay"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/one_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/gray_gag"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toTopOf="@+id/two_tv"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text="7.0, 21 Jump Street" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/two_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/gray_gag"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toTopOf="@+id/three_tv"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text="2012, comedy, thriller" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/three_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="6dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/gray_gag"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toTopOf="@+id/eye_btn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text="United States, 1h 49min, 18+" />
+
+        <ImageButton
+            android:id="@+id/eye_btn"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:layout_marginBottom="14dp"
+            android:src="@drawable/eye_state"
+            android:scaleType="center"
+            app:layout_constraintBottom_toBottomOf="@+id/poster_iv"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageButton
+            android:id="@+id/bookmark_btn"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:layout_marginEnd="6dp"
+            android:src="@drawable/ic_flag"
+            app:tint="@color/img_ic_color"
+            android:scaleType="center"
+            app:layout_constraintBottom_toBottomOf="@+id/eye_btn"
+            app:layout_constraintEnd_toStartOf="@+id/eye_btn"
+            app:layout_constraintTop_toTopOf="@+id/eye_btn" />
+
+        <ImageButton
+            android:id="@+id/like_btn"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:layout_marginEnd="6dp"
+            android:src="@drawable/ic_heart"
+            app:tint="@color/img_ic_color"
+            android:scaleType="center"
+            app:layout_constraintBottom_toBottomOf="@+id/eye_btn"
+            app:layout_constraintEnd_toStartOf="@+id/bookmark_btn"
+            app:layout_constraintTop_toTopOf="@+id/eye_btn" />
+
+        <ImageButton
+            android:id="@+id/share_btn"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:layout_marginStart="6dp"
+            android:src="@drawable/ic_share"
+            android:scaleType="center"
+            app:layout_constraintBottom_toBottomOf="@+id/eye_btn"
+            app:layout_constraintStart_toEndOf="@+id/eye_btn"
+            app:layout_constraintTop_toTopOf="@+id/eye_btn" />
+
+        <ImageButton
+            android:id="@+id/other_btn"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:layout_marginStart="6dp"
+            android:src="@drawable/ic_other"
+            android:scaleType="center"
+            app:layout_constraintBottom_toBottomOf="@+id/eye_btn"
+            app:layout_constraintStart_toEndOf="@+id/share_btn"
+            app:layout_constraintTop_toTopOf="@+id/eye_btn" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/short_description_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="26dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="26dp"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/poster_iv"
+            tools:text="Short description" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/description_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="26dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="26dp"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/short_description_tv"
+            tools:text="Description" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="26dp"
+            android:layout_marginTop="32dp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/description_tv">
+
+            <include
+                android:id="@+id/season_section"
+                layout="@layout/item_info_season"
+                android:visibility="gone" />
+
+            <include
+                android:id="@+id/actor_include"
+                layout="@layout/item_movies_with_count"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="32dp"/>
+
+            <include
+                android:id="@+id/team_include"
+                layout="@layout/item_movies_with_count"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="32dp"/>
+
+            <include
+                android:id="@+id/gallery_include"
+                layout="@layout/item_movies_with_count"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="40dp"/>
+
+            <include
+                android:id="@+id/similar_include"
+                layout="@layout/item_movies_with_count"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

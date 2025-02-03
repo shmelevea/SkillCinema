@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".presentation.search.year.YearSelectorFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="26dp">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:navigationIcon="@drawable/ic_left">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/toolbar_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:maxLines="1"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                tools:text="Category" />
+        </androidx.appcompat.widget.Toolbar>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/from_year_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="26dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/search_in_the_period_from"
+            android:textColor="@color/gray_text_light"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+        <include
+            android:id="@+id/from_year_card"
+            layout="@layout/item_period_card"
+            android:layout_width="match_parent"
+            android:layout_height="224dp"
+            android:layout_marginStart="26dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="26dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/from_year_tv" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/to_year_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="26dp"
+            android:layout_marginTop="32dp"
+            android:text="@string/search_in_the_period_up_to"
+            android:textColor="@color/gray_text_light"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/from_year_card" />
+
+        <include
+            android:id="@+id/to_year_card"
+            layout="@layout/item_period_card"
+            android:layout_width="0dp"
+            android:layout_height="224dp"
+            android:layout_marginStart="26dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="26dp"
+            android:background="@drawable/rounded_border"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/to_year_tv" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/select_btn"
+            android:layout_width="126dp"
+            android:layout_height="36dp"
+            android:layout_marginTop="68dp"
+            android:paddingTop="4dp"
+            android:text="@string/select"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/to_year_card" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".presentation.basic.person.PersonFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="90dp">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:navigationIcon="@drawable/ic_left" />
+
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/gallery_image_iv"
+            android:layout_width="146dp"
+            android:layout_height="200dp"
+            android:layout_marginStart="26dp"
+            android:background="@color/gray_gag"
+            android:scaleType="center"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar"
+            app:shapeAppearanceOverlay="@style/ImageViewShape" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/name_tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="36dp"
+            android:textColor="@color/gray_dark"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/gallery_image_iv"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar"
+            tools:text="Name Surname" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/character_tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="36dp"
+            android:textColor="@color/gray_text_light"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/gallery_image_iv"
+            app:layout_constraintTop_toBottomOf="@+id/name_tv"
+            tools:text="Сharacter" />
+
+        <include
+            android:id="@+id/best_include"
+            layout="@layout/item_movies_with_count"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="26dp"
+            android:layout_marginTop="40dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/gallery_image_iv"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/section_title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="26dp"
+            android:layout_marginTop="36dp"
+            android:text="@string/filmography"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/best_include" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/all_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="40dp"
+            android:text="@string/to_the_list"
+            android:textColor="@color/blue"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@id/section_title_tv"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/section_title_tv"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <ImageButton
+            android:id="@+id/all_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_right"
+            app:layout_constraintBottom_toBottomOf="@+id/all_tv"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/all_tv" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/sum_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="16dp"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/gray_text_light"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="@+id/section_title_tv"
+            app:layout_constraintTop_toBottomOf="@+id/section_title_tv"
+            tools:text="44 movie" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
